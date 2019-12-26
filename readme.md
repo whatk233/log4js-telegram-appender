@@ -1,4 +1,4 @@
-# TelegramAppender - for [log4js-node](https://github.com/log4js-node/log4js-node)
+# TelegramAppender - for [log4js](https://github.com/log4js-node/log4js-node)
 
 Pre-requisites:
 * registered a telegram bot
@@ -15,7 +15,7 @@ npm install --save log4js
 
 Install log4js-node-telegramAppender:
 ```
-npm install --save "https://github.com/liangwp/log4js-node-telegramAppender/tarball/master"
+npm install --save log4js-telegram-appender
 ```
 
 Sample usage:
@@ -27,7 +27,7 @@ log4js.configure({
     appenders: {
         colouredConsole: { type: 'stdout' },
         telegramAlert: {
-            type: 'log4js-node-telegramAppender',
+            type: 'log4js-telegram-appender',
             silentAlertLevel: 'info',
             audioAlertLevel: 'error',
             bottoken: <token>,

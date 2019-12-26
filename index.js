@@ -77,7 +77,7 @@ function configure(config, layouts, findAppender, levels) {
         var timestamp = `[${loggingEvent.startTime.toISOString()}]\n`;
         var body = loggingEvent.data.map(d => { return d.toString(); }).join("\n");
         return header+timestamp+body;
-    }
+    };
 
     var use_layout = config.layout ? layouts.layout(config.layout.type, config.layout) : default_layout;
 
