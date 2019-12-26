@@ -1,6 +1,6 @@
 {
   "name": "log4js-telegram-appender",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Writes logs to telegram chats",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
   "keywords": [
     "telegram",
     "log4js",
-    "appender",
+    "appender"
   ],
   "license": "ISC",
   "dependencies": {
