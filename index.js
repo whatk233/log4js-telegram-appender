@@ -75,7 +75,15 @@ function configure(config, layouts, findAppender, levels) {
     var default_layout = function(loggingEvent) {
         var header = `<b>${loggingEvent.categoryName}: ${loggingEvent.level}</b>\n`;
         var timestamp = `[${loggingEvent.startTime.toISOString()}]\n`;
-        var body = loggingEvent.data.map(d => { return d.toString(); }).join("\n");
+        var body = loggingEvent.data.map(d => {
+            try {
+                if (typeof d === 'object') return JSON.stringify(d);
+            } catch (e) {
+                //ignore
+            }
+
+            return d.toString();
+        }).join("\n");
         return header+timestamp+body;
     };
 
