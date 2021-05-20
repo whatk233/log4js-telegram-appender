@@ -7,7 +7,7 @@ function stdoutAppender(layout, levels, config) {
 
     const silentLevel = levels.getLevel(config.silentAlertLevel);
     const audioLevel = levels.getLevel(config.audioAlertLevel);
-    const sentMessageRoute = `https://api.telegram.org/bot/${config.bottoken}/sendMessage`;
+    const sentMessageRoute = `https://api.telegram.org/bot${config.bottoken}/sendMessage`;
     const botchat_params = {
         searchParams: {
             chat_id: config.botchatid,
